@@ -12,7 +12,7 @@ MQTT_IDS="$(jq --raw-output '.ids' $CONFIG_PATH)"
 
 
 # Start the listener and enter an endless loop
-echo "Starting RTL_433 with parameters:"
+echo "Starting RTLAMR with parameters:"
 echo "MQTT Host =" $MQTT_HOST
 echo "MQTT User =" $MQTT_USER
 echo "MQTT Password =" $MQTT_PASS
@@ -23,8 +23,15 @@ echo "MQTT Device IDs =" $MQTT_IDS
 #set -x  ## uncomment for MQTT logging...
 /usr/local/bin/rtl_tcp &>/dev/null &
 
-sleep 10
+# Sleep to fill buffer a bit
+sleep 15
+
 LASTVAL="0"
+
+# set a time to listen for. Set to 0 for unliminted
+
+# Do this loop, so will restart if buffer runs out
+while true; do 
 
 /go/bin/rtlamr -format json -msgtype=$MQTT_MSGTYPE -filterid=$MQTT_IDS | while read line
 
@@ -40,4 +47,8 @@ do
 	LASTVAL=$VAL
   fi
   
+done
+
+sleep 60
+
 done
