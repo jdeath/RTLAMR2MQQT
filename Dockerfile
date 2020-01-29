@@ -27,21 +27,9 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     make && \
     make install && \
     chmod +s /usr/local/bin/rtl_* && \
-    cd /tmp/src/ && \
-    git clone https://github.com/merbanan/rtl_433 && \
-    cd rtl_433/ && \
-    mkdir build && \
-    cd build && \
-    cmake ../ && \
-    make && \
-    make install && \
     apk del build-deps && \
     rm -r /tmp/src && \
-    apk add --no-cache libusb mosquitto-clients jq
-
-RUN apk add --no-cache \
-    coreutils=8.31-r0 \
-    wget=1.20.3-r0 make musl-dev go git gcc
+    apk add --no-cache libusb mosquitto-clients jq coreutils=8.31-r0 wget=1.20.3-r0 make musl-dev go git gcc
 	
 # Configure Go
 ENV GOROOT /usr/lib/go
