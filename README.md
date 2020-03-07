@@ -8,7 +8,7 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 
 ## Usage
 
-1) Install the addon.
+1) Install the addon. Do this by downloading this repository and adding in a folder under /addons/ (eg. /addons/rtlamr2mqtt)
 
 2) Use addon configuration to configure:
 - mqtt_host
@@ -16,8 +16,6 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 - mqtt_password
 - msgType
 - ids
-
-The message topic is the same as in 
 
 3) Copy rtl2mqtt.sh to your hass.io config dir in a subdir called rtlamr2mqtt.
 i.e.
@@ -41,6 +39,7 @@ Data to the MQTT server is based on biochemguy setup: readings/$DEVICEID/meter_r
 This has been tested and used with the following hardware (you can get it on Amazon)
 
 - NooElec NESDR Nano 2+ Tiny Black RTL-SDR USB
+- RTL-SDR Blog R820T2 RTL2832U 1PPM TCXO SMA Software Defined Radio
 
 
 ## Troubleshooting
