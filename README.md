@@ -21,10 +21,18 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 i.e.
 .../config/rtlamr2mqtt/rtl2mqtt.sh
 This allows you to edit the start script if you need to make any changes
+
 If you are using a 64 bit version of hassio, add below line into the rtl2mqtt.sh:
 ```
 export LD_LIBRARY_PATH=/usr/local/lib64
 ```
+
+If this is using too much processor, add the -duration=60s (or how every many seconds you want) tag to your the rtl2mqqt.sh script. Turns out rtlamr using a bit of processor:
+```
+/go/bin/rtlamr -format json -msgtype=$MQTT_MSGTYPE -filterid=$MQTT_IDS -duration=60s | while read line
+```
+also increase the sleep to however many seconds you want to wait until scanning again. I am using 60s of processing, then 5 mintutes (300s) of sleeping.
+
 NOTE that some people have reported issues using samba to copy the script. For some reason it does not get copied to the container on start up of the addon. If you see this issue, please scp the script to your hassio config folder, or ssh in and edit the file locally with vi/nano.
 
 
