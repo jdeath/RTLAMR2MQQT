@@ -6,6 +6,7 @@
   "startup": "before",
   "boot": "auto",
   "map": ["config:rw", "ssl"],
+  "url": "https://github.com/jdeath/RTLAMR2MQQT/tree/master/RTLAMR2MQQT",
   "devices": ["/dev/bus/usb:/dev/bus/usb:rwm"],
   "host_network": "False",
   "arch": [
