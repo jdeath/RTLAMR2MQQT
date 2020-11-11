@@ -27,7 +27,7 @@ If you are using a 64 bit version of hassio, add below line into the rtl2mqtt.sh
 export LD_LIBRARY_PATH=/usr/local/lib64
 ```
 
-If this is using too much processor, add the -duration=60s (or how every many seconds you want) tag to your the rtl2mqqt.sh script. Turns out rtlamr using a bit of processor:
+If this is using too much processor, add the -duration=60s (or how every many seconds you want) tag to your the rtl2mqqt.sh script. Turns out rtlamr uses quite a bit of processor:
 ```
 /go/bin/rtlamr -format json -msgtype=$MQTT_MSGTYPE -filterid=$MQTT_IDS -duration=60s | while read line
 ```
