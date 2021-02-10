@@ -30,7 +30,7 @@ RUN apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && \
     apk del build-deps && \
     rm -r /tmp/src && \
     apk add --no-cache libusb mosquitto-clients jq coreutils wget make musl-dev go git gcc
-	
+
 # Configure Go
 ENV GOROOT /usr/lib/go
 ENV GOPATH /go
@@ -44,6 +44,7 @@ RUN go get github.com/bemasher/rtlamr
 #
 # Use this variable when creating a container to specify the MQTT broker host.
 ENV MQTT_HOST="hassio.local"
+ENV MQTT_PORT="1883"
 ENV MQTT_USER="guest"
 ENV MQTT_PASS="guest"
 ENV MQTT_TOPIC="homeassistant/sensor/rtl433"
