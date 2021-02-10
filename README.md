@@ -11,7 +11,7 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 1) Install the addon. Do this by downloading this repository and adding in a folder under /addons/ (eg. /addons/rtlamr2mqtt)
 
 2) Use addon configuration to configure:
-- mqtt_host
+- mqtt_host (use number IP address, not hassio.local, localhost, 127.0.0.1, etc) . Also do not add port number here
 - mqtt_user
 - mqtt_password
 - msgType
@@ -21,6 +21,7 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 i.e.
 .../config/rtlamr2mqtt/rtl2mqtt.sh
 This allows you to edit the start script if you need to make any changes
+If you do not use port 1883, add a port call to /usr/bin/mosquitto_pub line in the rtl2mqtt.sh (-p PORTNUM). 
 
 If you are using a 64 bit version of hassio, add below line into the rtl2mqtt.sh:
 ```
