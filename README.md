@@ -22,7 +22,7 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 3) Copy rtl2mqtt.sh to your hass.io config dir in a subdir called rtlamr2mqtt.
 i.e.
 .../config/rtlamr2mqtt/rtl2mqtt.sh
-This allows you to edit the start script if you need to make any changes
+This allows you to edit the start script if you need to make any changes.
 If you do not use port 1883, add a port call to /usr/bin/mosquitto_pub line in the rtl2mqtt.sh (-p PORTNUM). 
 
 If you are using a 64 bit version of hassio, add below line into the rtl2mqtt.sh:
