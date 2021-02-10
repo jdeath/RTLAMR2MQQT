@@ -10,7 +10,7 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 
 1) Install the addon. Do this by either:
  - downloading this repository and adding in a folder under /addons/ (eg. /addons/rtlamr2mqtt)
- - add this respository to the Add-on Store
+ - adding this respository to the Add-on Store
 
 2) Use addon configuration to configure:
 - mqtt_host (use number IP address, not hassio.local, localhost, 127.0.0.1, etc) . Also do not add port number here
