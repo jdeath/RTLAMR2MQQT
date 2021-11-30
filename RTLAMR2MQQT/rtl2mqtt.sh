@@ -39,7 +39,11 @@ while true; do
 
 do
   VAL="$(echo $line | jq --raw-output '.Message.Consumption' | tr -s ' ' '_')" # replace ' ' with '_'
-  DEVICEID="$(echo $line | jq --raw-output '.Message.ID' | tr -s ' ' '_')"
+  
+  # Handle mixed SCM/SCM+ better. Use commentted line instead if have issues
+  #DEVICEID="$(echo $line | jq --raw-output '.Message.ID' | tr -s ' ' '_')"
+  DEVICEID="$(echo $line | jq --raw-output '.Message.ID,.Message.EndpointID | select( . != null )' | tr -s ' ' '\_')"
+  
   MQTT_PATH="readings/$DEVICEID/meter_reading"
 
   # Create file with touch /tmp/rtl_433.log if logging is needed
