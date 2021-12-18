@@ -6,6 +6,9 @@ This hass.io addon is based on James Fry' project here: https://github.com/james
 which was based on Chris Kacerguis' project here: https://github.com/chriskacerguis/honeywell2mqtt,
 which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.com/roflmao/rtl2mqtt
 
+Try some of my other addons at: https://github.com/jdeath/homeassistant-addons
+Currently have MeTube (youtube downloader), speedtest, emulatorjs (web based retro game console player)
+
 ## Usage
 
 1) Install the addon. Do this by either:
