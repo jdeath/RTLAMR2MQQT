@@ -7,7 +7,7 @@ which was based on Chris Kacerguis' project here: https://github.com/chriskacerg
 which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.com/roflmao/rtl2mqtt
 
 Try some of my other addons at: https://github.com/jdeath/homeassistant-addons
-Currently have MeTube (youtube downloader), speedtest, emulatorjs (web based retro game console player)
+Currently have MeTube (youtube downloader), speedtest, emulatorjs (web based retro game console player), and WireGuard Easy (wireguard with WebUI on ingress, no more manual config!)
 
 ## Usage
 
