@@ -9,6 +9,8 @@ which is in turn based on Marco Verleun's rtl2mqtt image here: https://github.co
 Try some of my other addons at: https://github.com/jdeath/homeassistant-addons
 Currently have MeTube (youtube downloader), speedtest, emulatorjs (web based retro game console player), and WireGuard Easy (wireguard with WebUI on ingress, no more manual config!)
 
+[![Stargazers repo roster for @jdeath/RTLAMR2MQQT](https://git-lister.onrender.com/api/stars/jdeath/RTLAMR2MQQT?limit=30)](https://github.com/jdeath/RTLAMR2MQQT/stargazers)
+
 ## Usage
 
 1) Install the addon. Do this by either:
